@@ -1,36 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rotate_stack.c                                     :+:      :+:    :+:   */
+/*   stack_rotate_reverse.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nicolas <nicolas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/05 15:56:05 by nicolas           #+#    #+#             */
-/*   Updated: 2023/10/05 16:48:19 by nicolas          ###   ########.fr       */
+/*   Created: 2023/10/05 16:37:31 by nicolas           #+#    #+#             */
+/*   Updated: 2023/10/07 18:37:46 by nicolas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stacks.h>
 
-int	rotate_stack(t_stack *stack)
+int	stack_rotate_reverse(t_stack *stack)
 {
-	if (!stack->back)
+	if (!stack->btm)
 	{
-		ft_putstr_fd("Error: stack back is undefined!", 2);
+		ft_putstr_fd("Error: undefined stack btm!", 2);
 		return (0);
 	}
-	if (stack->front)
-	{	
-		if (stack->front->next == stack->back)
-			swap_stack(stack);
+	if (stack->top)
+	{
+		if (stack->top == stack->btm)
+			stack_swap(stack);
 		else
 		{
-			stack->back->next = stack->front;
-			stack->front->prev = stack->back;
-			stack->front = stack->back;
-			stack->front->prev->next = NULL;
-			stack->back = stack->back->prev;
-			stack->front->prev = NULL;
+			stack->top->prev = stack->btm;
+			stack->btm->next = stack->top;
+			stack->top = stack->top->next;
+			stack->top->prev = NULL;
+			stack->btm = stack->btm->next;
+			stack->btm->next = NULL;
 		}
 		return (1);
 	}
