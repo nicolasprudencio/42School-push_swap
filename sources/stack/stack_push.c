@@ -3,14 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   stack_push.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nicolas <nicolas@student.42.fr>            +#+  +:+       +#+        */
+/*   By: nprudenc <nprudenc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 18:41:59 by nicolas           #+#    #+#             */
-/*   Updated: 2023/10/07 18:37:30 by nicolas          ###   ########.fr       */
+/*   Updated: 2023/10/09 20:55:43 by nprudenc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stacks.h>
+
+// needs to be refactored
 
 int	stack_push(t_stack *stack_a, t_stack *stack_b)
 {
