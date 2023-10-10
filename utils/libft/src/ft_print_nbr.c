@@ -1,30 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   stack_swap.c                                       :+:      :+:    :+:   */
+/*   ft_print_nbr.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nprudenc <nprudenc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/04 17:15:56 by nicolas           #+#    #+#             */
-/*   Updated: 2023/10/09 20:53:32 by nprudenc         ###   ########.fr       */
+/*   Created: 2023/06/24 13:35:22 by nprudenc          #+#    #+#             */
+/*   Updated: 2023/09/29 17:16:10 by nprudenc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stacks.h>
+#include "libft.h"
 
-int	swap_stack(t_stack *stack)
-{
-	if (!stack->top)
-	{	
-		ft_putstr_fd("Error: stack is undefined", 2);
-		return (0);
-	}
-	if (stack->top->next)
+int	ft_putnbr(int n)
+{	
+	int			letter_counter;
+	long		nbr;
+
+	nbr = n;
+	letter_counter = 0;
+	if (nbr < 0)
 	{
-		stack->top->value ^= stack->top->next->value;
-		stack->top->next->value ^= stack->top->value;
-		stack->top->value ^= stack->top->next->value;
-		return (1);
+		nbr *= -1;
+		letter_counter += ft_putchar('-');
 	}
-	return (0);
+	if (nbr / 10 > 0)
+		letter_counter += ft_putnbr(nbr / 10);
+	nbr = nbr % 10 + '0';
+	letter_counter += ft_putchar(nbr);
+	return (letter_counter);
 }

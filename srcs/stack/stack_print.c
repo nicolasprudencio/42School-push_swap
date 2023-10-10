@@ -1,25 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_dladdtop.c                                      :+:      :+:    :+:   */
+/*   stack_print.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nicolas <nicolas@student.42.fr>            +#+  +:+       +#+        */
+/*   By: nprudenc <nprudenc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/07 19:04:07 by nicolas           #+#    #+#             */
-/*   Updated: 2023/10/07 19:10:41 by nicolas          ###   ########.fr       */
+/*   Created: 2023/10/10 16:29:14 by nprudenc          #+#    #+#             */
+/*   Updated: 2023/10/10 16:53:45 by nprudenc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "stacks.h"
+#include <stdio.h>
 
-void	ft_dlnew(int value)
+void	print_stack(t_stack *stack)
 {
-	t_dlist *node;
-
-	node = (t_dlist *)ft_calloc(1, sizeof(t_dlist));
-	if (!node)
-		return (NULL);
-	node->value = value;
-	node->prev = NULL;
-	node->next = NULL;
+	t_dlist	*temp;
+	
+	temp = stack->top;
+	ft_printf("*********\n");
+	while (temp)
+	{
+		printf("*%4d   *\n", temp->value);
+		temp = temp->next;
+	}
+	ft_printf("*********\n");
 }

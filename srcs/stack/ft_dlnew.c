@@ -1,25 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_dladdtop.c                                      :+:      :+:    :+:   */
+/*   ft_dlnew.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nicolas <nicolas@student.42.fr>            +#+  +:+       +#+        */
+/*   By: nprudenc <nprudenc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/07 19:13:59 by nicolas           #+#    #+#             */
-/*   Updated: 2023/10/07 19:21:02 by nicolas          ###   ########.fr       */
+/*   Created: 2023/10/07 19:04:07 by nicolas           #+#    #+#             */
+/*   Updated: 2023/10/10 14:40:38 by nprudenc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_dladdtop(t_dlist *top, t_dlist *node)
+t_dlist	*ft_dlnew(int value)
 {
-	if (!top || !node)
-		return ;
-	if (!top->prev)
-	{
-		top->prev = node;
-		top->prev->next = top;
-		top = node;
-	}
+	t_dlist *node;
+
+	node = (t_dlist *)ft_calloc(1, sizeof(t_dlist));
+	if (!node)
+		return (NULL);
+	node->value = value;
+	node->prev = NULL;
+	node->next = NULL;
+	return (node);
 }
