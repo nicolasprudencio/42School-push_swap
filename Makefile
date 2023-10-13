@@ -12,8 +12,10 @@ OBJS_DIR	=	objs
 OBJS_ALL	=	$(addprefix $(OBJS_DIR)/,$(SRCS_SERVER:.c=.o))
 STCKS_PTH	=	srcs/stack/
 
-STCK_PREFIX = $(addprefix $(STCKS_PTH), $(STCK_TESTS))
-STCK_TESTS = stack_push.c ft_dladdtop.c ft_dlnew.c stack_print.c
+STCKS		=	$(addprefix $(STCKS_PTH), $(STCK_FILES))
+STCK_FILES	=	stack_push.c ft_dladdtop.c ft_dlnew.c stack_print.c stack_rotate.c ft_clear_dlist.c stack_rotate_reverse.c stack_swap.c stack_double_swap.c
+
+MAIN		=	main.c
 
 ANSI		=	\033[0
 YELLOW		=	;33
@@ -30,7 +32,7 @@ $(OBJS_DIR)/%.o:%.c
 	@$(CC) $(C_FLAGS) -c $< -o $@ $(INCLUDE)
 
 swap: $(OBJS_ALL)
-	@$(CC) $(C_FLAGS) $(OBJS_ALL) $(STCK_PREFIX) $(INCLUDE) -o push_swap
+	@$(CC) $(C_FLAGS) $(OBJS_ALL) $(STCKS) $(MAIN) $(INCLUDE) -o push_swap
 	@printf "%s$(ANSI)$(GREEN)m%-15s$(ANSI)m\n" "push_swap:" "Compiled"
 
 clean:

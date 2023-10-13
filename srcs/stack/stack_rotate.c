@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   stack_rotate.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nicolas <nicolas@student.42.fr>            +#+  +:+       +#+        */
+/*   By: nprudenc <nprudenc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 15:56:05 by nicolas           #+#    #+#             */
-/*   Updated: 2023/10/07 18:37:57 by nicolas          ###   ########.fr       */
+/*   Updated: 2023/10/13 19:21:30 by nprudenc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int	stack_rotate(t_stack *stack)
 	if (stack->top)
 	{	
 		if (stack->top->next == stack->btm)
-			swap_stack(stack);
+			stack_swap(stack);
 		else
 		{
 			stack->btm->next = stack->top;

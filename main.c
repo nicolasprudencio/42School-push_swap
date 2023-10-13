@@ -6,7 +6,7 @@
 /*   By: nprudenc <nprudenc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 19:38:39 by nprudenc          #+#    #+#             */
-/*   Updated: 2023/10/10 19:43:44 by nprudenc         ###   ########.fr       */
+/*   Updated: 2023/10/13 19:56:16 by nprudenc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,18 +20,21 @@ int main(void)
 	
 	stck_b->top = NULL;
 	stck_b->btm = NULL;
-	stck_a->top = ft_calloc(1, sizeof(t_dlist));
+	stck_a->top = NULL;
 	stck_a->btm = NULL;
 	while (++i < 5)
-		ft_dladdtop(&stck_a->top,ft_dlnew(i));
+		ft_dladdtop(&stck_a,ft_dlnew(i));
 	ft_printf("stack_a:\n");
 	print_stack(stck_a);
-	stack_push_ab(stck_a, stck_b);
-	stack_push_ab(stck_a, stck_b);
-	stack_push_ab(stck_a, stck_b);
-	stack_push_ab(stck_a, stck_b);
-	ft_printf("stack_b:\n");
-	print_stack(stck_b);
+	// printf("%d", stck_a->btm->value);
+	// stack_push_ab(stck_a, stck_b);
+	// stack_push_ab(stck_a, stck_b);
+	// stack_push_ab(stck_a, stck_b);
+	// stack_push_ab(stck_a, stck_b);
+	// ft_printf("stack_b:\n");
+	// print_stack(stck_b);
+	// stack_swap(stck_a);
+	stack_rotate_reverse(stck_a);
 	ft_printf("stack_a:\n");
 	print_stack(stck_a);
 	ft_clear_dlist(stck_a->top);

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   stack_double_swap.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nicolas <nicolas@student.42.fr>            +#+  +:+       +#+        */
+/*   By: nprudenc <nprudenc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 18:29:34 by nicolas           #+#    #+#             */
-/*   Updated: 2023/10/07 18:37:01 by nicolas          ###   ########.fr       */
+/*   Updated: 2023/10/13 19:21:14 by nprudenc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@ int	stack_double_swap(t_stack	*stack_a, t_stack *stack_b)
 	}
 	else if (stack_a->top && stack_b->top)
 	{
-		swap_stack(stack_a);
-		swap_stack(stack_b);
+		stack_swap(stack_a);
+		stack_swap(stack_b);
 	}
 	return (1);
 }
