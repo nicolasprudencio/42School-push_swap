@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_long.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nprudenc <nprudenc@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nicolas <nicolas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/24 13:08:29 by nprudenc          #+#    #+#             */
-/*   Updated: 2023/09/29 17:16:05 by nprudenc         ###   ########.fr       */
+/*   Updated: 2023/10/24 13:39:26 by nicolas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	ft_print_long(int n)
 
 	nbr = n;
 	letter_counter = 0;
-	if (nbr < 0)
+	if (n < 0)
 	{
 		nbr = 4294967296 + nbr;
 		return (16);
