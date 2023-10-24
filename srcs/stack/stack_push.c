@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   stack_push.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nprudenc <nprudenc@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nicolas <nicolas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 18:41:59 by nicolas           #+#    #+#             */
-/*   Updated: 2023/10/10 19:36:37 by nprudenc         ###   ########.fr       */
+/*   Updated: 2023/10/24 17:00:56 by nicolas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "stacks.h"
-#include <stdio.h>
 
 int	stack_push_ab(t_stack *stack_a, t_stack *stack_b)
 {
@@ -19,7 +18,7 @@ int	stack_push_ab(t_stack *stack_a, t_stack *stack_b)
 
 	if (!stack_a || !stack_a->top || !stack_b)
 	{
-		ft_putstr_fd("Error: stack_a is undefined!\n", 2);
+		ft_putstr_fd("Error!\n", 2);
 		return (0);
 	}
 	if (stack_a->top->next)
@@ -44,5 +43,6 @@ int	stack_push_ab(t_stack *stack_a, t_stack *stack_b)
 		stack_b->top = stack_a->top;
 		stack_a->top = a_top;
 	}
+	ft_printf("p%c\n", stack_b->name);
 	return (1);
 }
