@@ -13,7 +13,7 @@ OBJS_ALL	=	$(addprefix $(OBJS_DIR)/,$(SRCS_SERVER:.c=.o))
 STCKS_PTH	=	srcs/stack/
 
 STCKS		=	$(addprefix $(STCKS_PTH), $(STCK_FILES))
-STCK_FILES	=	stack_push.c ft_dladdtop.c ft_dlnew.c stack_print.c stack_rotate.c ft_clear_dlist.c stack_rotate_reverse.c stack_swap.c stack_double_swap.c
+STCK_FILES	=	stack_push.c ft_dladdtop.c ft_dladdbtm.c ft_dlnew.c stack_print.c stack_rotate.c ft_clear_dlist.c stack_rotate_reverse.c stack_swap.c stack_double_swap.c
 
 MAIN		=	main.c
 

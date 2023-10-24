@@ -1,28 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_hex.c                                     :+:      :+:    :+:   */
+/*   ft_dladdbtm.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nprudenc <nprudenc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/24 13:19:48 by nprudenc          #+#    #+#             */
-/*   Updated: 2023/10/23 22:11:13 by nprudenc         ###   ########.fr       */
+/*   Created: 2023/10/23 19:55:29 by nprudenc          #+#    #+#             */
+/*   Updated: 2023/10/23 20:04:50 by nprudenc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "stacks.h"
 
-int	ft_print_hex(unsigned int nb, char x)
+void	ft_dladdbtm(t_stack **stack, t_dlist *node)
 {
-	int	letter_counter;
-
-	letter_counter = 0;
-	if (nb / 16 > 0)
-		letter_counter += ft_print_hex(nb / 16, x);
-	nb = nb % 16;
-	if (x == 'X')
-		letter_counter += ft_putchar("0123456789ABCDEF"[nb % 16]);
+	if (!node || !stack)
+	{
+		ft_printf("Error: one or more parameters are undefined!");
+		return ;
+	}
+	if ((*stack)->btm)
+	{
+		(*stack)->btm->next = node;
+		node->prev = (*stack)->btm;
+		(*stack)->btm = node;
+	}
 	else
-		letter_counter += ft_putchar("0123456789abcdef"[nb % 16]);
-	return (letter_counter);
+	{
+		(*stack)->top = node;
+		(*stack)->btm = node;
+	}
 }

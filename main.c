@@ -6,7 +6,7 @@
 /*   By: nprudenc <nprudenc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 19:38:39 by nprudenc          #+#    #+#             */
-/*   Updated: 2023/10/13 19:56:16 by nprudenc         ###   ########.fr       */
+/*   Updated: 2023/10/23 20:06:31 by nprudenc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int main(void)
 	stck_a->top = NULL;
 	stck_a->btm = NULL;
 	while (++i < 5)
-		ft_dladdtop(&stck_a,ft_dlnew(i));
+		ft_dladdbtm(&stck_a,ft_dlnew(i));
 	ft_printf("stack_a:\n");
 	print_stack(stck_a);
 	// printf("%d", stck_a->btm->value);
@@ -34,9 +34,9 @@ int main(void)
 	// ft_printf("stack_b:\n");
 	// print_stack(stck_b);
 	// stack_swap(stck_a);
-	stack_rotate_reverse(stck_a);
-	ft_printf("stack_a:\n");
-	print_stack(stck_a);
+	// stack_rotate(stck_a);
+	// ft_printf("stack_a:\n");
+	// print_stack(stck_a);
 	ft_clear_dlist(stck_a->top);
 	ft_clear_dlist(stck_b->top);
 	free(stck_a);
