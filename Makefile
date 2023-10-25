@@ -4,16 +4,21 @@ LIBFT_DIR	=	./utils/libft/src
 LIBS_LINK	=	-L $(LIBFT_DIR) -lm -lft
 INCLUDE		=	-I ./includes $(LIBS_LINK)
 
-STACK_SRCS	=	swap.c
-
-STACK_SRCS	=	$(addprefix srcs/stack/,$(STACK_SRCS))
-
 OBJS_DIR	=	objs
 OBJS_ALL	=	$(addprefix $(OBJS_DIR)/,$(SRCS_SERVER:.c=.o))
-STCKS_PTH	=	srcs/stack/
 
+
+STCK_FILES	=	\stack_push.c stack_print.c stack_rotate.c stack_rotate_reverse.c stack_swap.c stack_double_swap.c stack_define.c stack_double_rotate.c stack_addbtm.c stack_addtop.c
+
+STCKS_PTH	=	srcs/stack/
 STCKS		=	$(addprefix $(STCKS_PTH), $(STCK_FILES))
-STCK_FILES	=	stack_push.c ft_dladdtop.c ft_dladdbtm.c ft_dlnew.c stack_print.c stack_rotate.c ft_clear_dlist.c stack_rotate_reverse.c stack_swap.c stack_double_swap.c
+
+
+# SRC_FILES = print_test.c
+
+SRCS_PTH = srcs/
+SRCS		+= $(STCKS)
+# SRCS		+= $(addprefix $(SRCS_PTH), $(SRC_FILES))
 
 MAIN		=	main.c
 
@@ -32,7 +37,7 @@ $(OBJS_DIR)/%.o:%.c
 	@$(CC) $(C_FLAGS) -c $< -o $@ $(INCLUDE)
 
 swap: $(OBJS_ALL)
-	@$(CC) $(C_FLAGS) $(OBJS_ALL) $(STCKS) $(MAIN) $(INCLUDE) -o push_swap
+	@$(CC) $(C_FLAGS) $(OBJS_ALL) $(SRCS) $(MAIN) $(INCLUDE) -o push_swap
 	@printf "%s$(ANSI)$(GREEN)m%-15s$(ANSI)m\n" "push_swap:" "Compiled"
 
 clean:
@@ -44,4 +49,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all tests libft_make swap client clean f_clean re
+.PHONY: all tests libft_make swap client clean fclean re

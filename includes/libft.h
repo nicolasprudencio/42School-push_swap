@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nprudenc <nprudenc@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nicolas <nicolas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 17:14:18 by nprudenc          #+#    #+#             */
-/*   Updated: 2023/10/10 16:37:30 by nprudenc         ###   ########.fr       */
+/*   Updated: 2023/10/25 20:08:11 by nicolas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,5 +91,7 @@ int		ft_print_long(int n);
 int		ft_print_hex(unsigned int nb, char c);
 int		ft_print_ptr(unsigned long nb);
 int		ft_printf(const char *str, ...);
+void	ft_dlclear(t_dlist *list);
+t_dlist	*ft_dlnew(int value);
 
 #endif

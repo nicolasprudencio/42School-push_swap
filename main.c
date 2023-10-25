@@ -6,11 +6,11 @@
 /*   By: nicolas <nicolas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 19:38:39 by nprudenc          #+#    #+#             */
-/*   Updated: 2023/10/24 19:40:26 by nicolas          ###   ########.fr       */
+/*   Updated: 2023/10/25 18:20:04 by nicolas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "stacks.h"
+#include "push_swap.h"
 
 static	void free_stacks(t_stack	*stck_a, t_stack *stck_b);
 
@@ -56,8 +56,8 @@ void throw_error(t_stack *stck_a, t_stack *stck_b)
 
 static	void free_stacks(t_stack	*stck_a, t_stack *stck_b)
 {
-	ft_clear_dlist(stck_a->top);
-	ft_clear_dlist(stck_b->top);
+	ft_dlclear(stck_a->top);
+	ft_dlclear(stck_b->top);
 	free(stck_a);
 	free(stck_b);
 }
