@@ -6,11 +6,13 @@
 /*   By: nicolas <nicolas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/07 18:39:47 by nicolas           #+#    #+#             */
-/*   Updated: 2023/10/25 18:07:42 by nicolas          ###   ########.fr       */
+/*   Updated: 2023/10/25 20:56:13 by nicolas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+// needs to treat the -44-44 example number
 
 int stack_define(int argc, char **argv, t_stack *stack)
 {
