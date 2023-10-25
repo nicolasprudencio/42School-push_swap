@@ -6,11 +6,11 @@
 /*   By: nicolas <nicolas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/07 18:39:47 by nicolas           #+#    #+#             */
-/*   Updated: 2023/10/25 16:34:42 by nicolas          ###   ########.fr       */
+/*   Updated: 2023/10/25 18:07:42 by nicolas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "stacks.h"
+#include "push_swap.h"
 
 int stack_define(int argc, char **argv, t_stack *stack)
 {
@@ -30,7 +30,7 @@ int stack_define(int argc, char **argv, t_stack *stack)
 			if (!ft_isdigit(argv[i][j]) && argv[i][j] != '-')
 				return (0);
 		}
-		ft_dladdbtm(&stack, ft_dlnew(ft_atoi(argv[i])));
+		stack_addbtm(&stack, ft_dlnew(ft_atoi(argv[i])));
 	}
 	return (1);
 }

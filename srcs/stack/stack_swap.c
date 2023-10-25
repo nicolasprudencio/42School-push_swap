@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   stack_swap.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nprudenc <nprudenc@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nicolas <nicolas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 17:15:56 by nicolas           #+#    #+#             */
-/*   Updated: 2023/10/10 15:41:09 by nprudenc         ###   ########.fr       */
+/*   Updated: 2023/10/25 17:51:15 by nicolas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stacks.h>
+#include <push_swap.h>
 
 int	stack_swap(t_stack *stack)
 {

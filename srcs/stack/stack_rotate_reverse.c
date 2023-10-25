@@ -6,11 +6,11 @@
 /*   By: nicolas <nicolas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 16:37:31 by nicolas           #+#    #+#             */
-/*   Updated: 2023/10/07 18:37:46 by nicolas          ###   ########.fr       */
+/*   Updated: 2023/10/25 17:51:04 by nicolas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stacks.h>
+#include "push_swap.h"
 
 int	stack_rotate_reverse(t_stack *stack)
 {

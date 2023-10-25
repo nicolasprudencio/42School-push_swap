@@ -6,11 +6,11 @@
 /*   By: nicolas <nicolas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 18:41:59 by nicolas           #+#    #+#             */
-/*   Updated: 2023/10/24 17:00:56 by nicolas          ###   ########.fr       */
+/*   Updated: 2023/10/25 17:50:55 by nicolas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "stacks.h"
+#include "push_swap.h"
 
 int	stack_push_ab(t_stack *stack_a, t_stack *stack_b)
 {
