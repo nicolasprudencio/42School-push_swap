@@ -3,18 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   stacks.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nicolas <nicolas@student.42.fr>            +#+  +:+       +#+        */
+/*   By: nprudenc <nprudenc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 18:06:58 by nicolas           #+#    #+#             */
-/*   Updated: 2023/10/25 20:05:22 by nicolas          ###   ########.fr       */
+/*   Updated: 2023/10/26 13:13:35 by nprudenc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef STACKS_H
 # define STACKS_H
-
-# include "push_swap.h"
-# include "libft.h"
 
 typedef struct s_stack
 {	
