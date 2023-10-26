@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nicolas <nicolas@student.42.fr>            +#+  +:+       +#+        */
+/*   By: nprudenc <nprudenc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 19:38:39 by nprudenc          #+#    #+#             */
-/*   Updated: 2023/10/26 00:25:02 by nicolas          ###   ########.fr       */
+/*   Updated: 2023/10/26 19:08:30 by nprudenc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ int main(int argc, char *argv[])
 	// stack_rotate(stck_a);
 	// ft_printf("stack_a:\n");
 	// print_stack(stck_a);
-	ft_printf("lower return: %d\n", has_greater(stck_a->top, 1));
+	ft_printf("mid_value: %d\n", find_mid_value(stck_a->top));
 	free_stacks(stck_a, stck_b);
 	return (0);
 }

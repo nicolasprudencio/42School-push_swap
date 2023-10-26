@@ -8,12 +8,12 @@ OBJS_DIR	=	objs
 OBJS_ALL	=	$(addprefix $(OBJS_DIR)/,$(SRCS_SERVER:.c=.o))
 
 
-STCK_FILES	=	\stack_push.c stack_print.c stack_rotate.c stack_rotate_reverse.c stack_swap.c stack_double_swap.c stack_define.c stack_double_rotate.c stack_addbtm.c stack_addtop.c
+STCK_FILES	=	stack_push.c stack_print.c stack_rotate.c stack_rotate_reverse.c stack_swap.c stack_double_swap.c stack_define.c stack_double_rotate.c stack_addbtm.c stack_addtop.c
 
 STCKS_PTH	=	srcs/stack/
 STCKS		=	$(addprefix $(STCKS_PTH), $(STCK_FILES))
 
-MGMT_FILES = has_lower.c has_greater.c
+MGMT_FILES = has_lower.c has_greater.c find_mid_value.c
 
 MGMT_PTH	= srcs/management_utils/
 MGMT_UTILS	=	$(addprefix $(MGMT_PTH), $(MGMT_FILES))

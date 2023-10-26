@@ -6,7 +6,7 @@
 /*   By: nprudenc <nprudenc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 17:14:18 by nprudenc          #+#    #+#             */
-/*   Updated: 2023/10/26 15:51:34 by nprudenc         ###   ########.fr       */
+/*   Updated: 2023/10/26 19:04:24 by nprudenc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,5 +95,8 @@ void		ft_dlclear(t_dlist *list);
 t_dlist		*ft_dlnew(int value);
 long int	ft_atol(char *nptr);
 int			ft_isnbr(char	*nptr);
+int			ft_lstfindhighest(t_dlist *head);
+int			ft_lstfindlowest(t_dlist *head);
+int			ft_lst_has(t_dlist	*head, int value);
 
 #endif
