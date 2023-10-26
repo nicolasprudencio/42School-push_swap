@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   stack_rotate.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nicolas <nicolas@student.42.fr>            +#+  +:+       +#+        */
+/*   By: nprudenc <nprudenc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 15:56:05 by nicolas           #+#    #+#             */
-/*   Updated: 2023/10/25 17:51:10 by nicolas          ###   ########.fr       */
+/*   Updated: 2023/10/26 15:54:33 by nprudenc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	stack_rotate(t_stack *stack)
 {
 	if (!stack->btm)
 	{
-		ft_putstr_fd("Error!", 2);
+		ft_putstr_fd("Error", 2);
 		return (0);
 	}
 	if (stack->top)

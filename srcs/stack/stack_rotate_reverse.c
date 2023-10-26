@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   stack_rotate_reverse.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nicolas <nicolas@student.42.fr>            +#+  +:+       +#+        */
+/*   By: nprudenc <nprudenc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 16:37:31 by nicolas           #+#    #+#             */
-/*   Updated: 2023/10/25 17:51:04 by nicolas          ###   ########.fr       */
+/*   Updated: 2023/10/26 15:54:27 by nprudenc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	stack_rotate_reverse(t_stack *stack)
 {
 	if (!stack->btm)
 	{
-		ft_putstr_fd("Error: undefined stack btm!", 2);
+		ft_putstr_fd("Error\n", 2);
 		return (0);
 	}
 	if (stack->top)

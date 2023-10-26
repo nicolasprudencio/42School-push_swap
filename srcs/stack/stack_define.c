@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   stack_define.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nicolas <nicolas@student.42.fr>            +#+  +:+       +#+        */
+/*   By: nprudenc <nprudenc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/07 18:39:47 by nicolas           #+#    #+#             */
-/*   Updated: 2023/10/26 00:47:02 by nicolas          ###   ########.fr       */
+/*   Updated: 2023/10/26 15:22:35 by nprudenc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,16 @@
 
 // needs to treat the -44-44 example number
 
-static int	check_stack(t_dlist *stack)
+static int	check_stack(t_dlist *top)
 {	
 	t_dlist	*current;
 	t_dlist	*temp;
 
-	if (stack->next)
-		temp = stack->next;
+	if (top->next)
+		temp = top->next;
 	else
 		return (1);	
-	current = stack;
+	current = top;
 	while (temp)
 	{
 		if (current->value == temp->value)
@@ -47,14 +47,11 @@ int stack_define(int argc, char **argv, t_stack *stack)
 	while (++i < argc)
 	{
 		j = -1;
-		while (argv[i][++j])
-		{	
-			if (!ft_isdigit(argv[i][j]) && argv[i][j] != '-')
-				return (0);
-		}
-		stack_addbtm(&stack, ft_dlnew(ft_atoi(argv[i])));
-		if (!check_stack(stack->top))
+		if (!ft_isnbr(argv[i]))
 			return (0);
+		stack_addbtm(&stack, ft_dlnew(ft_atoi(argv[i])));
 	}
+	if (!check_stack(stack->top))
+		return (0);
 	return (1);
 }

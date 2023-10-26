@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   stack_addbtm.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nicolas <nicolas@student.42.fr>            +#+  +:+       +#+        */
+/*   By: nprudenc <nprudenc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/23 19:55:29 by nprudenc          #+#    #+#             */
-/*   Updated: 2023/10/25 17:49:46 by nicolas          ###   ########.fr       */
+/*   Updated: 2023/10/26 15:53:43 by nprudenc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	stack_addbtm(t_stack **stack, t_dlist *node)
 {
 	if (!node || !stack)
 	{
-		ft_printf("Error: one or more parameters are undefined!");
+		ft_printf("Error\n");
 		return ;
 	}
 	if ((*stack)->btm)
