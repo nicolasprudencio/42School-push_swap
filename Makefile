@@ -13,11 +13,16 @@ STCK_FILES	=	\stack_push.c stack_print.c stack_rotate.c stack_rotate_reverse.c s
 STCKS_PTH	=	srcs/stack/
 STCKS		=	$(addprefix $(STCKS_PTH), $(STCK_FILES))
 
+MGMT_FILES = has_lower.c has_greater.c
+
+MGMT_PTH	= srcs/management_utils/
+MGMT_UTILS	=	$(addprefix $(MGMT_PTH), $(MGMT_FILES))
 
 # SRC_FILES = print_test.c
 
 SRCS_PTH = srcs/
 SRCS		+= $(STCKS)
+SRCS		+= $(MGMT_UTILS)
 # SRCS		+= $(addprefix $(SRCS_PTH), $(SRC_FILES))
 
 MAIN		=	main.c
