@@ -19,7 +19,8 @@ ft_lstclear.c ft_lstiter.c ft_lstmap.c \
 ft_atox.c get_next_line.c ft_gridlen.c \
 ft_printf.c ft_print_char.c ft_print_hex.c \
  ft_print_long.c ft_print_nbr.c ft_print_str.c \
-ft_print_pointer.c ft_dlclear.c ft_dlnew.c\
+ft_print_pointer.c ft_dlclear.c ft_dlnew.c \
+ft_atol.c ft_isnbr.c
 
 OBJS	= $(SRCS:%.c=./obj/%.o)
 FLAGS	= -Werror -Wextra -Wall -g
