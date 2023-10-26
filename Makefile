@@ -33,6 +33,7 @@ GREEN		=	;32
 RED			=	;31
 
 all: $(OBJS_ALL) libft_make swap
+	@printf "\033[0;1$(GREEN)m%s\033[0m\n" "Compiled successfully"
 
 libft_make:
 	@make -C $(LIBFT_DIR)
