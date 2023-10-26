@@ -6,7 +6,7 @@
 /*   By: nprudenc <nprudenc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 13:07:26 by nprudenc          #+#    #+#             */
-/*   Updated: 2023/10/26 14:12:54 by nprudenc         ###   ########.fr       */
+/*   Updated: 2023/10/26 15:23:45 by nprudenc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	ft_isnbr(char	*nptr)
 	i = 0;
 	if (ft_atol(nptr) > 2147483647 || ft_atol(nptr) < -2147483648)
 		return (0);
-	if (nptr[0] == '-' && nptr[1] || nptr[0] == '+' && nptr[1])
+	if ((nptr[0] == '-' && nptr[1]) || (nptr[0] == '+' && nptr[1]))
 		i++;
 	while (nptr[i])
 		if (nptr[i] == '-' || nptr[i] == '+' || !ft_isdigit(nptr[i++]))
