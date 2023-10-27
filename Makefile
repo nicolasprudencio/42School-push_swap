@@ -1,5 +1,5 @@
 CC			=	cc
-C_FLAGS		=	-Wall -Wextra -Werror -g3 -ggdb
+C_FLAGS		=	-Wall -Wextra -Werror -g -ggdb
 LIBFT_DIR	=	./utils/libft/src
 LIBS_LINK	=	-L $(LIBFT_DIR) -lm -lft
 INCLUDE		=	-I ./includes $(LIBS_LINK)
@@ -20,9 +20,15 @@ MGMT_UTILS	=	$(addprefix $(MGMT_PTH), $(MGMT_FILES))
 
 # SRC_FILES = print_test.c
 
+SORT_FILES	= sort.c
+SORT_PTH	= srcs/sorting/
+
+SORT = $(addprefix $(SORT_PTH), $(SORT_FILES))
+
 SRCS_PTH = srcs/
 SRCS		+= $(STCKS)
 SRCS		+= $(MGMT_UTILS)
+SRCS		+= $(SORT)
 # SRCS		+= $(addprefix $(SRCS_PTH), $(SRC_FILES))
 
 MAIN		=	main.c

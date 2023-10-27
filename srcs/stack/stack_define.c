@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   stack_define.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nprudenc <nprudenc@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nicolas <nicolas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/07 18:39:47 by nicolas           #+#    #+#             */
-/*   Updated: 2023/10/26 15:22:35 by nprudenc         ###   ########.fr       */
+/*   Updated: 2023/10/27 15:47:05 by nicolas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,6 @@ static int	check_stack(t_dlist *top)
 int stack_define(int argc, char **argv, t_stack *stack)
 {
 	int		i;
-	int		j;
 	
 	stack->top = NULL;
 	stack->btm = NULL;
@@ -46,7 +45,6 @@ int stack_define(int argc, char **argv, t_stack *stack)
 	i = 0;
 	while (++i < argc)
 	{
-		j = -1;
 		if (!ft_isnbr(argv[i]))
 			return (0);
 		stack_addbtm(&stack, ft_dlnew(ft_atoi(argv[i])));
