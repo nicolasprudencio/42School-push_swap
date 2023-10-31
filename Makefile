@@ -1,5 +1,5 @@
 CC			=	cc
-C_FLAGS		=	-Wall -Wextra -Werror -g -ggdb
+C_FLAGS		=	-Wall -Wextra -Werror -g -ggdb -O3
 LIBFT_DIR	=	./utils/libft/src
 LIBS_LINK	=	-L $(LIBFT_DIR) -lm -lft
 INCLUDE		=	-I ./includes $(LIBS_LINK)
@@ -13,7 +13,7 @@ STCK_FILES	=	stack_push.c stack_print.c stack_rotate.c stack_rotate_reverse.c st
 STCKS_PTH	=	srcs/stack/
 STCKS		=	$(addprefix $(STCKS_PTH), $(STCK_FILES))
 
-MGMT_FILES = has_lower.c has_greater.c find_mid_value.c
+MGMT_FILES = has_lower.c has_greater.c find_mid_value.c stack_is_ordered.c send_stack.c find_size.c find_indexes.c
 
 MGMT_PTH	= srcs/management_utils/
 MGMT_UTILS	=	$(addprefix $(MGMT_PTH), $(MGMT_FILES))

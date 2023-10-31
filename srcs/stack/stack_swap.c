@@ -6,7 +6,7 @@
 /*   By: nprudenc <nprudenc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 17:15:56 by nicolas           #+#    #+#             */
-/*   Updated: 2023/10/26 15:54:40 by nprudenc         ###   ########.fr       */
+/*   Updated: 2023/10/31 20:04:31 by nprudenc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,10 @@ int	stack_swap(t_stack *stack)
 		stack->top->value ^= stack->top->next->value;
 		stack->top->next->value ^= stack->top->value;
 		stack->top->value ^= stack->top->next->value;
+		stack->top->index ^= stack->top->next->index;
+		stack->top->next->index ^= stack->top->index;
+		stack->top->index ^= stack->top->next->index;
+		ft_printf("s%c\n", stack->name);
 		return (1);
 	}
 	return (0);

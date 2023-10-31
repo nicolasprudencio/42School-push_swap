@@ -6,7 +6,7 @@
 /*   By: nprudenc <nprudenc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 18:41:59 by nicolas           #+#    #+#             */
-/*   Updated: 2023/10/26 15:54:19 by nprudenc         ###   ########.fr       */
+/*   Updated: 2023/10/31 13:39:39 by nprudenc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,8 @@ int	stack_push_ab(t_stack *stack_a, t_stack *stack_b)
 	t_dlist	*a_top;
 
 	if (!stack_a || !stack_a->top || !stack_b)
-	{
-		ft_putstr_fd("Error\n", 2);
 		return (0);
-	}
+		// ft_putstr_fd("Error\n", 2);
 	if (stack_a->top->next)
 	{
 		a_top = stack_a->top->next;

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nicolas <nicolas@student.42.fr>            +#+  +:+       +#+        */
+/*   By: nprudenc <nprudenc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/25 17:46:07 by nicolas           #+#    #+#             */
-/*   Updated: 2023/10/27 16:27:25 by nicolas          ###   ########.fr       */
+/*   Updated: 2023/10/30 19:30:48 by nprudenc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,8 @@ int		has_lower(t_dlist *head, int value);
 int		has_greater(t_dlist *head, int value);
 int		find_mid_value(t_dlist *head);
 void	sort_stack(t_stack *stck_a, t_stack *stck_b);
+int		stack_is_ordered(t_dlist *stack);
+int		send_stack(t_stack *stck_b, t_stack *stck_a);
+int		find_stack_size(t_dlist *lst);
 
 #endif

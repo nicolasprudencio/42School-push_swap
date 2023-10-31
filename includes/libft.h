@@ -6,7 +6,7 @@
 /*   By: nprudenc <nprudenc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 17:14:18 by nprudenc          #+#    #+#             */
-/*   Updated: 2023/10/26 19:04:24 by nprudenc         ###   ########.fr       */
+/*   Updated: 2023/10/31 12:18:10 by nprudenc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,8 +33,9 @@ typedef struct s_list
 
 typedef struct s_dlist
 {
-	struct s_dlist	*prev;
 	int				value;
+	int				index;
+	struct s_dlist	*prev;
 	struct s_dlist	*next;
 }				t_dlist;
 

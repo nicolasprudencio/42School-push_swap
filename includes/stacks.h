@@ -6,7 +6,7 @@
 /*   By: nprudenc <nprudenc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 18:06:58 by nicolas           #+#    #+#             */
-/*   Updated: 2023/10/26 13:13:35 by nprudenc         ###   ########.fr       */
+/*   Updated: 2023/10/31 12:24:41 by nprudenc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,7 @@ int		stack_define(int argc, char **argv, t_stack *stack);
 void	stack_double_rotate(t_stack *stck_a, t_stack *stck_b);
 void	stack_addbtm(t_stack **stack, t_dlist *node);
 void	stack_addtop(t_stack **stack, t_dlist *node);
+int		check_stack(t_dlist *top);
+void	find_indexes(t_stack *stack);
 
 #endif
