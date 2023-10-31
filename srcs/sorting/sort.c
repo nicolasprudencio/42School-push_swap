@@ -6,7 +6,7 @@
 /*   By: nprudenc <nprudenc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 16:25:09 by nprudenc          #+#    #+#             */
-/*   Updated: 2023/10/31 18:57:00 by nprudenc         ###   ########.fr       */
+/*   Updated: 2023/10/31 20:09:52 by nprudenc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,17 +15,7 @@
 static void	sort_three(t_stack *stack)
 {
 	int	highest;
-
-	// int	highest;
-
-	// highest = dll_highest(stack->top);
-	// if (dll_index(stack->top, highest) == 1)
-	// 	stck_rott_rotate(stack, 1);
-	// else if (dll_index(stack->top, highest) == 2)
-	// 	stck_rott_rgt(stack, 1);
-	// if (stack->top->as_int > stack->top->next->as_int)
-	// 	stck_swap(stack, 1);
-
+	
 	highest = ft_lstfindhighest(stack->top);
 	if (stack->top->index == 2)
 		stack_rotate(stack);
@@ -50,6 +40,25 @@ static void	sort_four(t_stack *stack_a, t_stack *stack_b)
 	sort_three(stack_a);
 	stack_push_ab(stack_b, stack_a);
 	stack_rotate(stack_a);
+}
+void	sort_4(t_stack *stack_a, t_stack *stack_b)
+{
+	int	highest;
+
+	highest = dll_highest(stack_a->front);
+	if (dll_index(stack_a->front, highest) == 2)
+		stck_swap(stack_a, 1);
+	else if (dll_index(stack_a->front, highest) == 4)
+		stck_rott_rgt(stack_a, 1);
+	else if (dll_index(stack_a->front, highest) == 3)
+	{
+		stck_rott_rgt(stack_a, 1);
+		stck_rott_rgt(stack_a, 1);
+	}
+	stck_push(stack_a, stack_b);
+	sort_3(stack_a);
+	stck_push(stack_b, stack_a);
+	stck_rott_lft(stack_a, 1);
 }
 
 static void	sort_five(t_stack *stack_a, t_stack *stack_b)
